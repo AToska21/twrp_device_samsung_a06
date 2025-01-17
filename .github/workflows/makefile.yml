@@ -1,27 +1,27 @@
-name: Makefile CI
+الاسم.: Makefile CI
 
-on:
-  push:
-    branches: [ "twrp_12.0" ]
-  pull_request:
-    branches: [ "twrp_12.0" ]
+على.:
+  دفع. :
+  الفروع. : [ "TWRP_12.0" ]
+  سحب_طلب. :
+  الفروع. : [ "TWRP_12.0" ]
 
-jobs:
-  build:
+وظائف.:
+  بناء. :
 
-    runs-on: ubuntu-latest
+  يعمل على. : أوبونتو-الأحدث.
 
-    steps:
-    - uses: actions/checkout@v4
+  خطوات :
+ - الاستخدامات.: الإجراءات/الخروج @v4
 
-    - name: configure
-      run: ./configure
+ - الاسم.: تكوين.
+  تشغيل. : ./التكوين
 
-    - name: Install dependencies
-      run: make
+ - الاسم.: تثبيت التبعيات.
+  تشغيل. : جعل.
 
-    - name: Run check
-      run: make check
+ - الاسم.: افحص.
+  تشغيل. : جعل الاختيار.
 
-    - name: Run distcheck
-      run: make distcheck
+ - الاسم.: تشغيل Distcheck.
+  تشغيل. : جعل Distcheck.
